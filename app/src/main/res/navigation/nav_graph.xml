@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/registerFragment">
+
+    <fragment
+        android:id="@+id/loginFragment"
+        android:name="com.example.noteapp.LoginFragment"
+        android:label="fragment_login"
+        tools:layout="@layout/fragment_login" >
+        <action
+            android:id="@+id/action_loginFragment_to_mainFragment"
+            app:destination="@id/mainFragment"
+            app:popUpTo="@id/registerFragment"
+            app:popUpToInclusive="true" />
+    </fragment>
+    <fragment
+        android:id="@+id/registerFragment"
+        android:name="com.example.noteapp.RegisterFragment"
+        android:label="fragment_register"
+        tools:layout="@layout/fragment_register" >
+        <action
+            android:id="@+id/action_registerFragment_to_loginFragment"
+            app:destination="@id/loginFragment"
+            app:enterAnim="@android:anim/slide_in_left"
+            app:popEnterAnim="@android:anim/slide_in_left" />
+        <action
+            android:id="@+id/action_registerFragment_to_mainFragment"
+            app:destination="@id/mainFragment"
+            app:popUpTo="@id/registerFragment"
+            app:popUpToInclusive="true" />
+    </fragment>
+    <fragment
+        android:id="@+id/mainFragment"
+        android:name="com.example.noteapp.MainFragment"
+        android:label="fragment_main"
+        tools:layout="@layout/fragment_main" >
+        <action
+            android:id="@+id/action_mainFragment_to_yearFragment"
+            app:destination="@id/yearFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/yearFragment"
+        android:name="com.example.noteapp.YearFragment"
+        android:label="fragment_year"
+        tools:layout="@layout/fragment_year" />
+</navigation>

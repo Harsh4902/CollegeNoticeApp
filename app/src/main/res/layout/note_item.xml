@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="8dp"
+    android:padding="16dp"
+    android:background="@drawable/note_background">
+
+    <ImageView
+        android:id="@+id/imFile"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:src="@drawable/ic_baseline_picture_as_pdf_24"
+        app:layout_constraintBottom_toTopOf="@+id/tvFileName"
+        />
+
+    <TextView
+        android:id="@+id/tvFileName"
+        android:layout_width="381dp"
+        android:layout_height="22dp"
+        android:layout_marginTop="12dp"
+        android:fontFamily="@font/sf_pro_display_regular"
+        android:text="TextView"
+        android:textColor="@color/black"
+        android:textSize="13sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imFile" />
+</androidx.constraintlayout.widget.ConstraintLayout>
